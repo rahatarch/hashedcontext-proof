@@ -137,4 +137,4 @@ If you use this package, please cite the paper ([`CITATION.cff`](CITATION.cff)):
 
 ## Contact
 
-Rahat Hasan · Akkhar-Labs · [rahathasan5773@gmail.com](mailto:rahathasan5773@gmail.com) · [github.com/rahatarch](https://github.com/rahatarch)
+Rahat Hasan · Akkhar-Labs · [rahatarch@akkharlabs.com](mailto:rahatarch@akkharlabs.com) · [github.com/rahatarch](https://github.com/rahatarch)
