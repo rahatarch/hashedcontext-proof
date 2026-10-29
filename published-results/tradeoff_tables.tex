@@ -1,0 +1,95 @@
+\begin{table*}[t]\centering\small\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+\textbf{Mode} & \textbf{KV / request} & \textbf{vs append} & \textbf{vs compaction} & \textbf{Compute, warm cache} & \textbf{Compute, no cache} & \textbf{Cache hit} \\ \midrule
+Append-only & 30.96 GB & --- & +174.5\% & --- & --- & 95.9\% \\
+Append-only + compaction & 11.28 GB & -63.6\% & --- & +144.8\% & -63.6\% & 72.6\% \\
+Mode A: Authoritative Tail & 3.50 GB & -88.7\% & -69.0\% & +3.6\% & -88.7\% & 62.6\% \\
+Mode B: Lazy Tail, rebase after 10 diffs & 4.71 GB & -84.8\% & -58.2\% & -88.1\% & -84.8\% & 96.8\% \\
+Mode B without rebasing & 3.98 GB & -87.1\% & -64.7\% & -89.4\% & -87.1\% & 96.6\% \\
+\bottomrule\end{tabular}}
+\caption{Memory and compute across 20,000 simulated sessions (824,728 turns). Compute = prompt tokens the server must process. Warm cache = ideal per-session prefix cache that never evicts.}
+\label{tab:dual_fleet}\end{table*}
+\begin{table}[htbp]\centering\small\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrrrr@{}}\toprule
+& \multicolumn{2}{c}{\textbf{KV}} & \multicolumn{2}{c}{\textbf{Compute, warm}} & \multicolumn{2}{c}{\textbf{Compute, no cache}} \\
+\textbf{Profile} & A & B & A & B & A & B \\ \midrule
+Paper & -88.3\% & -88.1\% & +2.4\% & -91.5\% & -88.3\% & -88.1\% \\
+Realistic & -87.2\% & -80.3\% & +5.1\% & -84.0\% & -87.2\% & -80.3\% \\
+Runaway & -89.2\% & -84.7\% & +4.6\% & -85.1\% & -89.2\% & -84.7\% \\
+All & -88.7\% & -84.8\% & +3.6\% & -88.1\% & -88.7\% & -84.8\% \\
+\bottomrule\end{tabular}}
+\caption{Change vs append-only by workload profile. KV = mean KV-cache per request; with no cache, compute equals prompt length, so it matches the KV column.}
+\label{tab:dual_profile}\end{table}
+\begin{table}[htbp]\centering\small\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrr@{}}\toprule
+\textbf{Metric} & \textbf{Append-only + compaction} & \textbf{Mode A} & \textbf{Mode B} \\ \midrule
+Agent turns per hour & 3,883 & 13,854 & 12,456 \\
+p95 turn latency (s) & 689 & 190 & 210 \\
+p95 time to first token (s) & 655 & 107 & 128 \\
+Requests running at once & 3.54 & 14.06 & 12.84 \\
+KV per running request (GB) & 14.10 & 3.55 & 3.88 \\
+KV pool utilisation & 99.7\% & 99.7\% & 99.7\% \\
+Prefix-cache hit rate & 0.3\% & 0.6\% & 0.6\% \\
+Prompt tokens computed per turn & 43,069 & 17,462 & 19,414 \\
+Generated tokens/s (cluster) & 335 & 824 & 739 \\
+Compaction calls & 204 & 0 & 0 \\
+\bottomrule\end{tabular}}
+\caption{Simulated 16-GPU H100 cluster serving 512 agents with prefix caching on (1 hour, paper's H100 constants).}
+\label{tab:dual_cluster}\end{table}
+\begin{table}[htbp]\centering\small\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrrr@{}}\toprule
+\textbf{Prefix cache} & \textbf{Agents/GPU} & \textbf{Baseline} & \textbf{Mode A} & \textbf{Mode B} & \textbf{B vs A} \\ \midrule
+on & 1 & 297 & 434 & 587 & 1.35$\times$ \\
+on & 2 & 514 & 829 & 1,118 & 1.35$\times$ \\
+on & 4 & 295 & 1,168 & 2,054 & 1.76$\times$ \\
+on & 8 & 182 & 1,303 & 1,398 & 1.07$\times$ \\
+on & 16 & 197 & 949 & 756 & 0.80$\times$ \\
+on & 32 & 266 & 943 & 829 & 0.88$\times$ \\
+on & 64 & 331 & 1,023 & 930 & 0.91$\times$ \\
+off & 1 & 86 & 304 & 202 & 0.66$\times$ \\
+off & 2 & 135 & 457 & 324 & 0.71$\times$ \\
+off & 4 & 180 & 666 & 440 & 0.66$\times$ \\
+off & 8 & 178 & 773 & 590 & 0.76$\times$ \\
+off & 16 & 195 & 836 & 675 & 0.81$\times$ \\
+off & 32 & 267 & 942 & 827 & 0.88$\times$ \\
+off & 64 & 334 & 1,022 & 926 & 0.91$\times$ \\
+\bottomrule\end{tabular}}
+\caption{Agent turns completed per GPU-hour on one simulated H100 by serving scenario.}
+\label{tab:dual_sweep}\end{table}
+\begin{table}[htbp]\centering\small\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}lrrrr@{}}\toprule
+\textbf{Prompt} & \textbf{Tokens} & \textbf{File} & \textbf{Line} & \textbf{Text} \\ \midrule
+Append-only & 217,963 & 100\% & 100\% & 100\% \\
+Mode A (stubs + live tail) & 24,723 & 100\% & 0\% & 0\% \\
+Mode A + $\mathcal{R}(h)$ & 28,443 & 100\% & 100\% & 100\% \\
+Mode B (rebase after 10) & 25,158 & 100\% & 100\% & 100\% \\
+Mode B (no rebase) & 25,158 & 100\% & 100\% & 100\% \\
+\bottomrule\end{tabular}}
+\caption{Mechanical needle test: what each prompt contains (300 cases). The grader is a program, so it does not measure whether a live model can apply diff chains.}
+\label{tab:dual_needle}\end{table}
+\begin{table*}[t]\centering\small
+\begin{tabular}{@{}p{5.2cm}p{2.5cm}p{8.7cm}@{}}\toprule
+\textbf{Scenario} & \textbf{Mode} & \textbf{Evidence} \\ \midrule
+Prefix cache on, light load (1--8 agents per GPU, cache stays warm) & Mode B & B completes 1.07--1.76$\times$ the turns of A (Table~\ref{tab:dual_sweep}) \\
+Prefix cache on, heavy load (16+ agents per GPU, cache evicted) & Mode A & B completes 0.80--0.91$\times$ the turns of A; cluster: 0.90$\times$ (Table~\ref{tab:dual_cluster}) \\
+No prefix cache, or requests not routed to the same cache & Mode A & B completes 0.66--0.91$\times$ the turns of A (Table~\ref{tab:dual_sweep}) \\
+Billed API with discounted cached input tokens & Mode B & B computes 88.1\% fewer prompt tokens than append-only with a warm cache; A computes +3.6\% (Table~\ref{tab:dual_fleet}) \\
+Lowest KV memory per request & Mode A & A 3.50 GB vs B 4.71 GB per request (Table~\ref{tab:dual_fleet}) \\
+Long edit loops, accuracy-critical work & Mode A, or Mode B with N=5 & Live test, line after anchor (Table~\ref{tab:dual_live}): A 93.3\%, B 90.0\% with 10 diffs, 93.3\% with N=5; differences of 1--2 of 30 cases, within noise \\
+Model must see exactly what changed, without retrieval & Mode B & B shows the changed lines directly; A needs $\mathcal{R}(h)$ for that (Table~\ref{tab:dual_needle}) \\
+\bottomrule\end{tabular}
+\caption{Recommended deployment mode by serving scenario, derived from the simulated measurements and the live diff-chain test.}
+\label{tab:dual_scenarios}\end{table*}
+\begin{table}[htbp]\centering\small\resizebox{\columnwidth}{!}{%
+\begin{tabular}{@{}llrrr@{}}\toprule
+\textbf{Question} & \textbf{Prompt} & \textbf{Diffs} & \textbf{Correct} & \textbf{95\% CI} \\ \midrule
+Line after anchor & Append-only & 0 & 29/30 (96.7\%) & 83\%--99\% \\
+Line after anchor & Mode A & 0 & 28/30 (93.3\%) & 79\%--98\% \\
+Line after anchor & Mode B, N=10 & 10 & 27/30 (90.0\%) & 74\%--97\% \\
+Line after anchor & Mode B, N=5 & 4 & 28/30 (93.3\%) & 79\%--98\% \\
+Line number & Append-only & 0 & 9/30 (30.0\%) & 17\%--48\% \\
+Line number & Mode A & 0 & 4/30 (13.3\%) & 5\%--30\% \\
+Line number & Mode B, N=10 & 10 & 17/30 (56.7\%) & 39\%--73\% \\
+\bottomrule\end{tabular}}
+\caption{Live-LLM diff-chain test on deepseek-v4.1-flash (30 cases; the target file has 10 edits). \emph{Line after anchor}: report the line that follows a given unique line. \emph{Line number}: report line $N$, which mostly measures line counting. 95\% Wilson intervals.}
+\label{tab:dual_live}\end{table}

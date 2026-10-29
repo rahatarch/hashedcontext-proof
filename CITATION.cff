@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the paper as below."
+type: software
+title: "HashedContext reproducibility package"
+abstract: "Engine, simulators, experiments, raw results and logs for independently verifying the HashedContext paper."
+authors:
+  - family-names: Hasan
+    given-names: Rahat
+    email: rahathasan5773@gmail.com
+    affiliation: Akkhar-Labs
+    orcid: "https://orcid.org/0009-0003-6184-5269"
+version: "0.3"
+date-released: 2026-10-29
+license: MIT
+keywords:
+  - LLM inference
+  - KV-cache
+  - autonomous agents
+  - content-addressed storage
+  - context deduplication
+  - reproducibility
+preferred-citation:
+  type: article
+  title: "Scaling GPU KV-Cache Efficiency and Inference Concurrency for Autonomous Agents with HashedContext: A Dual-Mode Architecture"
+  authors:
+    - family-names: Hasan
+      given-names: Rahat
+      affiliation: Akkhar-Labs
+      orcid: "https://orcid.org/0009-0003-6184-5269"
+  year: 2026
+  publisher:
+    name: Zenodo
+  doi: 10.5281/zenodo.23668957
+  url: "https://doi.org/10.5281/zenodo.23668957"

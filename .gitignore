@@ -1,0 +1,16 @@
+# Your own runs (the published run lives in published-results/)
+/results/
+/figures/
+!/published-results/figures/
+# Downloaded at setup time by `python -m sim.fetch_corpus`
+corpus/
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Never commit API keys
+*.key
+api_key
+.env

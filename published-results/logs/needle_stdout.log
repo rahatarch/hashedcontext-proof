@@ -1,0 +1,41 @@
+{
+ "conv": {
+  "n": 300,
+  "path_acc": 1.0,
+  "line_acc": 1.0,
+  "text_acc": 1.0,
+  "mean_prompt_tokens": 217962.50666666665
+ },
+ "hc": {
+  "n": 300,
+  "path_acc": 1.0,
+  "line_acc": 0.0,
+  "text_acc": 0.0,
+  "mean_prompt_tokens": 24722.656666666666
+ },
+ "hc_resolve": {
+  "n": 300,
+  "path_acc": 1.0,
+  "line_acc": 1.0,
+  "text_acc": 1.0,
+  "mean_prompt_tokens": 28443.153333333332
+ },
+ "lazy": {
+  "n": 300,
+  "path_acc": 1.0,
+  "line_acc": 1.0,
+  "text_acc": 1.0,
+  "mean_prompt_tokens": 25157.8,
+  "diffs_to_apply_mean": 1.6033333333333333,
+  "diffs_to_apply_max": 5
+ },
+ "lazy_no_rebase": {
+  "n": 300,
+  "path_acc": 1.0,
+  "line_acc": 1.0,
+  "text_acc": 1.0,
+  "mean_prompt_tokens": 25157.8,
+  "diffs_to_apply_mean": 1.6033333333333333,
+  "diffs_to_apply_max": 5
+ }
+}

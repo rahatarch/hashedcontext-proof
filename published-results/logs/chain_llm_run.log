@@ -1,0 +1,123 @@
+case  0 conv  BAD
+case  0 hc    BAD
+case  0 lazy  BAD
+case  1 conv  BAD
+case  1 hc    BAD
+case  1 lazy  BAD
+case  2 conv  BAD
+case  2 hc    BAD
+case  2 lazy  BAD
+case  3 conv  BAD
+case  3 hc    BAD
+case  3 lazy  OK 
+case  4 conv  BAD
+case  4 hc    BAD
+case  4 lazy  OK 
+case  5 conv  BAD
+case  5 hc    BAD
+case  5 lazy  OK 
+case  6 conv  BAD
+case  6 hc    BAD
+case  6 lazy  BAD
+case  7 conv  BAD
+case  7 hc    BAD
+case  7 lazy  OK 
+case  8 conv  OK 
+case  8 hc    BAD
+case  8 lazy  BAD
+case  9 conv  BAD
+case  9 hc    BAD
+case  9 lazy  OK 
+case 10 conv  OK 
+case 10 hc    OK 
+case 10 lazy  OK 
+case 11 conv  BAD
+case 11 hc    BAD
+case 11 lazy  BAD
+case 12 conv  BAD
+case 12 hc    BAD
+case 12 lazy  OK 
+case 13 conv  BAD
+case 13 hc    BAD
+case 13 lazy  OK 
+case 14 conv  BAD
+case 14 hc    BAD
+case 14 lazy  BAD
+case 15 conv  OK 
+case 15 hc    BAD
+case 15 lazy  OK 
+case 16 conv  BAD
+case 16 hc    BAD
+case 16 lazy  OK 
+case 17 conv  BAD
+case 17 hc    BAD
+case 17 lazy  BAD
+case 18 conv  OK 
+case 18 hc    OK 
+case 18 lazy  OK 
+case 19 conv  OK 
+case 19 hc    OK 
+case 19 lazy  OK 
+case 20 conv  OK 
+case 20 hc    OK 
+case 20 lazy  OK 
+case 21 conv  OK 
+case 21 hc    BAD
+case 21 lazy  OK 
+case 22 conv  BAD
+case 22 hc    BAD
+case 22 lazy  OK 
+case 23 conv  BAD
+case 23 hc    BAD
+case 23 lazy  OK 
+case 24 conv  OK 
+case 24 hc    BAD
+case 24 lazy  BAD
+case 25 conv  OK 
+case 25 hc    BAD
+case 25 lazy  OK 
+case 26 conv  BAD
+case 26 hc    BAD
+case 26 lazy  BAD
+case 27 conv  BAD
+case 27 hc    BAD
+case 27 lazy  BAD
+case 28 conv  BAD
+case 28 hc    BAD
+case 28 lazy  BAD
+case 29 conv  BAD
+case 29 hc    BAD
+case 29 lazy  BAD
+{
+ "conv": {
+  "n": 30,
+  "correct": 9,
+  "api_errors": 0,
+  "accuracy": 0.3,
+  "mean_prompt_tokens": 43229.23333333333
+ },
+ "hc": {
+  "n": 30,
+  "correct": 4,
+  "api_errors": 0,
+  "accuracy": 0.13333333333333333,
+  "mean_prompt_tokens": 8510.3
+ },
+ "lazy": {
+  "n": 30,
+  "correct": 17,
+  "api_errors": 0,
+  "accuracy": 0.5666666666666667,
+  "mean_prompt_tokens": 9053.233333333334,
+  "diffs_to_apply_mean": 10.0,
+  "diffs_to_apply_min": 10,
+  "diffs_to_apply_max": 10
+ },
+ "grader": "deepseek-v4.1-flash",
+ "settings": {
+  "cases": 30,
+  "diffs": 10,
+  "rebase": 10,
+  "question": "line"
+ }
+}

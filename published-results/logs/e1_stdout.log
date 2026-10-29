@@ -1,0 +1,73 @@
+  500/20000 sessions  41s
+  1000/20000 sessions  80s
+  1500/20000 sessions  123s
+  2000/20000 sessions  171s
+  2500/20000 sessions  219s
+  3000/20000 sessions  257s
+  3500/20000 sessions  300s
+  4000/20000 sessions  342s
+  4500/20000 sessions  385s
+  5000/20000 sessions  429s
+  5500/20000 sessions  471s
+  6000/20000 sessions  512s
+  6500/20000 sessions  552s
+  7000/20000 sessions  597s
+  7500/20000 sessions  632s
+  8000/20000 sessions  675s
+  8500/20000 sessions  717s
+  9000/20000 sessions  759s
+  9500/20000 sessions  802s
+  10000/20000 sessions  841s
+  10500/20000 sessions  884s
+  11000/20000 sessions  924s
+  11500/20000 sessions  965s
+  12000/20000 sessions  1008s
+  12500/20000 sessions  1050s
+  13000/20000 sessions  1086s
+  13500/20000 sessions  1130s
+  14000/20000 sessions  1170s
+  14500/20000 sessions  1210s
+  15000/20000 sessions  1256s
+  15500/20000 sessions  1294s
+  16000/20000 sessions  1340s
+  16500/20000 sessions  1384s
+  17000/20000 sessions  1424s
+  17500/20000 sessions  1470s
+  18000/20000 sessions  1512s
+  18500/20000 sessions  1554s
+  19000/20000 sessions  1594s
+  19500/20000 sessions  1637s
+  20000/20000 sessions  1679s
+{
+ "sessions": 20000,
+ "wall_seconds": 1678.9442365169525,
+ "turns": 824728,
+ "file_observations": 2061819,
+ "observed_bytes": 24944906176,
+ "fleet_vault_unique_objects": 568161,
+ "fleet_vault_unique_bytes": 5875262205,
+ "per_session_vault_unique_bytes": 7242730633,
+ "edits": 589802,
+ "check_failures": 219059,
+ "live_ok": 2061819,
+ "live_total": 2061819,
+ "expand_ok": 11032,
+ "expand_total": 11032,
+ "sigma_paper": [
+  53.0,
+  61.0,
+  67.0,
+  76.0,
+  88.0
+ ],
+ "sigma_paper_mean": 67.76907575301227,
+ "sigma_compact_mean": 19.78018245054488,
+ "live_header_mean": 62.76907575301227,
+ "compactions": 58667,
+ "dropped_tokens": 4698622631.0,
+ "N_mean_by_profile": {
+  "paper": 4517.668399798082,
+  "realistic": 2023.1216803857985,
+  "runaway": 2120.7620749137504
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "sha256": {
+  "4096": {
+   "seconds": 7.832372924898579e-06,
+   "us_per_MB": 2005.087468774036,
+   "GB_per_s": 0.5229577344279785
+  },
+  "65536": {
+   "seconds": 0.00011473558886621049,
+   "us_per_MB": 1835.7694218593679,
+   "GB_per_s": 0.5711915600696437
+  },
+  "1048576": {
+   "seconds": 0.001824207703123193,
+   "us_per_MB": 1824.207703123193,
+   "GB_per_s": 0.5748117378326777
+  },
+  "33554432": {
+   "seconds": 0.0582408316671111,
+   "us_per_MB": 1820.025989597222,
+   "GB_per_s": 0.5761324321704074
+  }
+ },
+ "sigma": {
+  "cl100k_base": {
+   "paper_mean": 70.1811224489796,
+   "paper_p5_p95": [
+    62.0,
+    77.0
+   ],
+   "compact_mean": 22.418367346938776,
+   "hex64_mean": 36.4719387755102,
+   "n_paths": 392,
+   "paper_listing1": 67
+  },
+  "o200k_base": {
+   "paper_mean": 70.43298969072166,
+   "paper_p5_p95": [
+    62.0,
+    78.0
+   ],
+   "compact_mean": 22.47938144329897,
+   "hex64_mean": 36.623711340206185,
+   "n_paths": 388,
+   "paper_listing1": 67
+  }
+ }
+}
+{'k': 1, 'conv_bytes': 78339, 'hc_bytes': 79615, 'conv_tokens': 19839, 'hc_tokens': 20336, 'json_conv_ms': 0.23417524998876615, 'json_hc_ms': 0.2343427499909012, 'orjson_conv_ms': 0.07448144997397321, 'orjson_hc_ms': 0.08645289999549277, 'sha_all_file_bytes_ms': 0.12154633380608477}
+{'k': 6, 'conv_bytes': 469008, 'hc_bytes': 95642, 'conv_tokens': 119019, 'hc_tokens': 23809, 'json_conv_ms': 1.4040104999367031, 'json_hc_ms': 0.31495205003011506, 'orjson_conv_ms': 0.5301389500345977, 'orjson_hc_ms': 0.16773739998825477, 'sha_all_file_bytes_ms': 1.2430356667512872}
+{'k': 11, 'conv_bytes': 858916, 'hc_bytes': 110840, 'conv_tokens': 217995, 'hc_tokens': 27047, 'json_conv_ms': 2.6205821000075957, 'json_hc_ms': 0.3634317999967607, 'orjson_conv_ms': 0.8354002499800117, 'orjson_hc_ms': 0.13381535000007716, 'sha_all_file_bytes_ms': 1.3590069999433279}
+{'k': 16, 'conv_bytes': 1250277, 'hc_bytes': 127045, 'conv_tokens': 317374, 'hc_tokens': 30568, 'json_conv_ms': 3.8449391999165528, 'json_hc_ms': 0.41406899981666356, 'orjson_conv_ms': 1.343750000160071, 'orjson_hc_ms': 0.1586506001331145, 'sha_all_file_bytes_ms': 1.9700643333635526}
+{'k': 21, 'conv_bytes': 1642736, 'hc_bytes': 144028, 'conv_tokens': 417029, 'hc_tokens': 34249, 'json_conv_ms': 5.143834199770936, 'json_hc_ms': 0.4816210002900334, 'orjson_conv_ms': 1.594044000012218, 'orjson_hc_ms': 0.17945339968719054, 'sha_all_file_bytes_ms': 2.6431546666572103}
+{'k': 26, 'conv_bytes': 2035750, 'hc_bytes': 161127, 'conv_tokens': 516833, 'hc_tokens': 38002, 'json_conv_ms': 6.4349142001447035, 'json_hc_ms': 0.5521267998119583, 'orjson_conv_ms': 2.346512999793049, 'orjson_hc_ms': 0.20303199999034405, 'sha_all_file_bytes_ms': 3.1811940001110393}
+{'k': 30, 'conv_bytes': 2349186, 'hc_bytes': 173619, 'conv_tokens': 596428, 'hc_tokens': 40681, 'json_conv_ms': 7.401974199819961, 'json_hc_ms': 0.5940512000961462, 'orjson_conv_ms': 2.947114200287615, 'orjson_hc_ms': 0.21990540008118842, 'sha_all_file_bytes_ms': 3.84772999980972}

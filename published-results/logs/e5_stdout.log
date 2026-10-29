@@ -1,0 +1,136 @@
+{
+ "kv_bytes_per_token": {
+  "paper": "~160 KB",
+  "computed": 163840
+ },
+ "kv_100k_GB": {
+  "paper": 16.4,
+  "computed": 16.384
+ },
+ "decode_ms_100k": {
+  "paper": 4.9,
+  "computed": 4.8907462686567165
+ },
+ "decode_ms_20k": {
+  "paper": 0.98,
+  "computed": 0.9781492537313432
+ },
+ "Bmax_100k": {
+  "paper": 3,
+  "computed": 3
+ },
+ "Bmax_20k": {
+  "paper": 15,
+  "computed": 15
+ },
+ "R_inf_file": {
+  "paper": 0.99125,
+  "computed": 0.99125
+ },
+ "prefill_k10_conv": {
+  "paper": "10*Cd+200,000",
+  "computed": 200000
+ },
+ "prefill_k10_hc": {
+  "paper": "10*Cd+21,750",
+  "computed": 21575,
+  "note": "paper's 21,750 = M*N + k*M*sigma (uses k not k-1)"
+ },
+ "prefix_total": {
+  "paper": [
+   619500,
+   44750,
+   0.928
+  ],
+  "computed": [
+   619500,
+   44750,
+   0.9277643260694108
+  ],
+  "mem_GB": [
+   99.12,
+   7.16
+  ]
+ },
+ "cost_P30": {
+  "paper": [
+   24.13,
+   2.58
+  ],
+  "computed": [
+   24.13,
+   2.58
+  ]
+ },
+ "cost_P100": {
+  "paper": [
+   259.81,
+   14.5
+  ],
+  "computed": [
+   259.81,
+   14.5
+  ]
+ },
+ "cost_ratio_P100": {
+  "paper": 17.9,
+  "computed": 17.914242620124973
+ },
+ "Pmax_budget10": {
+  "paper": {
+   "conv": 19,
+   "hc": 78,
+   "closed_form_eq": "(B - a*M*N)/(a*(sigma+Cd))"
+  },
+  "computed": {
+   "conv": 19,
+   "hc": 78,
+   "closed_form_value": 7439,
+   "note": "closed form omits the quadratic k*Cd and M\u03c3 terms and the per-turn M*N tail"
+  }
+ },
+ "payload": {
+  "paper": {
+   "conv30": 2460000,
+   "hc30": 160900,
+   "ratio": 15.3
+  },
+  "computed": {
+   "conv30": 2460000,
+   "hc30": 160900,
+   "ratio": 15.28899937849596
+  }
+ },
+ "telemetry_table": {
+  "turn4": 0.576674955851083,
+  "turn5": 0.6300122846253189,
+  "file": 0.793,
+  "cache": 0.6037735849056604,
+  "abstract_claims": [
+   0.577,
+   0.672
+  ],
+  "contributions_claim": 0.6719
+ },
+ "fig2_hc_series": {
+  "paper_turn1": 20500,
+  "paper_step": 675,
+  "computed_turn1": 20500,
+  "computed_step": 675,
+  "mean_paper": 27000,
+  "mean_computed": 26912.5
+ },
+ "with_measured_sigma": {
+  "sigma": 67.0,
+  "R_inf_file": 0.98325,
+  "cost_P30": [
+   24.131250000000005,
+   2.7530625000000004
+  ],
+  "cost_P100": [
+   259.8125,
+   16.483125
+  ],
+  "prefill_k10_hc": 23015.0
+ }
+}

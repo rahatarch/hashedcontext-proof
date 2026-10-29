@@ -1,0 +1,33 @@
+{
+ "conv": {
+  "n": 30,
+  "correct": 9,
+  "api_errors": 0,
+  "accuracy": 0.3,
+  "mean_prompt_tokens": 43229.23333333333
+ },
+ "hc": {
+  "n": 30,
+  "correct": 4,
+  "api_errors": 0,
+  "accuracy": 0.13333333333333333,
+  "mean_prompt_tokens": 8510.3
+ },
+ "lazy": {
+  "n": 30,
+  "correct": 17,
+  "api_errors": 0,
+  "accuracy": 0.5666666666666667,
+  "mean_prompt_tokens": 9053.233333333334,
+  "diffs_to_apply_mean": 10.0,
+  "diffs_to_apply_min": 10,
+  "diffs_to_apply_max": 10
+ },
+ "grader": "deepseek-v4.1-flash",
+ "settings": {
+  "cases": 30,
+  "diffs": 10,
+  "rebase": 10,
+  "question": "line"
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "lazy": {
+  "n": 30,
+  "correct": 28,
+  "api_errors": 0,
+  "accuracy": 0.9333333333333333,
+  "mean_prompt_tokens": 10546.233333333334,
+  "diffs_to_apply_mean": 4.0,
+  "diffs_to_apply_min": 4,
+  "diffs_to_apply_max": 4
+ },
+ "grader": "deepseek-v4.1-flash",
+ "settings": {
+  "cases": 30,
+  "diffs": 10,
+  "rebase": 5,
+  "question": "anchor"
+ }
+}

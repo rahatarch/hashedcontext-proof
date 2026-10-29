@@ -1,0 +1,49 @@
+case  0 lazy  OK 
+case  1 lazy  OK 
+case  2 lazy  OK 
+case  3 lazy  OK 
+case  4 lazy  OK 
+case  5 lazy  OK 
+case  6 lazy  OK 
+case  7 lazy  OK 
+case  8 lazy  OK 
+case  9 lazy  OK 
+case 10 lazy  OK 
+case 11 lazy  OK 
+case 12 lazy  OK 
+case 13 lazy  OK 
+case 14 lazy  OK 
+case 15 lazy  BAD
+case 16 lazy  OK 
+case 17 lazy  OK 
+case 18 lazy  OK 
+case 19 lazy  OK 
+case 20 lazy  OK 
+case 21 lazy  OK 
+case 22 lazy  OK 
+case 23 lazy  OK 
+case 24 lazy  OK 
+case 25 lazy  OK 
+case 26 lazy  OK 
+case 27 lazy  OK 
+case 28 lazy  OK 
+case 29 lazy  BAD
+{
+ "lazy": {
+  "n": 30,
+  "correct": 28,
+  "api_errors": 0,
+  "accuracy": 0.9333333333333333,
+  "mean_prompt_tokens": 10546.233333333334,
+  "diffs_to_apply_mean": 4.0,
+  "diffs_to_apply_min": 4,
+  "diffs_to_apply_max": 4
+ },
+ "grader": "deepseek-v4.1-flash",
+ "settings": {
+  "cases": 30,
+  "diffs": 10,
+  "rebase": 5,
+  "question": "anchor"
+ }
+}

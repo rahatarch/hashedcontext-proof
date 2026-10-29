@@ -1,0 +1,123 @@
+case  0 conv  OK 
+case  0 hc    OK 
+case  0 lazy  OK 
+case  1 conv  OK 
+case  1 hc    OK 
+case  1 lazy  OK 
+case  2 conv  OK 
+case  2 hc    BAD
+case  2 lazy  OK 
+case  3 conv  OK 
+case  3 hc    OK 
+case  3 lazy  OK 
+case  4 conv  OK 
+case  4 hc    OK 
+case  4 lazy  OK 
+case  5 conv  OK 
+case  5 hc    OK 
+case  5 lazy  OK 
+case  6 conv  OK 
+case  6 hc    OK 
+case  6 lazy  BAD
+case  7 conv  OK 
+case  7 hc    OK 
+case  7 lazy  OK 
+case  8 conv  OK 
+case  8 hc    OK 
+case  8 lazy  OK 
+case  9 conv  OK 
+case  9 hc    OK 
+case  9 lazy  OK 
+case 10 conv  OK 
+case 10 hc    OK 
+case 10 lazy  OK 
+case 11 conv  OK 
+case 11 hc    OK 
+case 11 lazy  BAD
+case 12 conv  OK 
+case 12 hc    OK 
+case 12 lazy  OK 
+case 13 conv  OK 
+case 13 hc    OK 
+case 13 lazy  OK 
+case 14 conv  OK 
+case 14 hc    OK 
+case 14 lazy  OK 
+case 15 conv  OK 
+case 15 hc    OK 
+case 15 lazy  OK 
+case 16 conv  OK 
+case 16 hc    OK 
+case 16 lazy  OK 
+case 17 conv  OK 
+case 17 hc    OK 
+case 17 lazy  OK 
+case 18 conv  OK 
+case 18 hc    OK 
+case 18 lazy  OK 
+case 19 conv  OK 
+case 19 hc    OK 
+case 19 lazy  OK 
+case 20 conv  OK 
+case 20 hc    OK 
+case 20 lazy  OK 
+case 21 conv  OK 
+case 21 hc    OK 
+case 21 lazy  OK 
+case 22 conv  OK 
+case 22 hc    OK 
+case 22 lazy  OK 
+case 23 conv  OK 
+case 23 hc    OK 
+case 23 lazy  OK 
+case 24 conv  OK 
+case 24 hc    OK 
+case 24 lazy  OK 
+case 25 conv  OK 
+case 25 hc    OK 
+case 25 lazy  OK 
+case 26 conv  OK 
+case 26 hc    OK 
+case 26 lazy  OK 
+case 27 conv  OK 
+case 27 hc    OK 
+case 27 lazy  OK 
+case 28 conv  OK 
+case 28 hc    OK 
+case 28 lazy  OK 
+case 29 conv  BAD
+case 29 hc    BAD
+case 29 lazy  BAD
+{
+ "conv": {
+  "n": 30,
+  "correct": 29,
+  "api_errors": 0,
+  "accuracy": 0.9666666666666667,
+  "mean_prompt_tokens": 43091.23333333333
+ },
+ "hc": {
+  "n": 30,
+  "correct": 28,
+  "api_errors": 0,
+  "accuracy": 0.9333333333333333,
+  "mean_prompt_tokens": 8520.166666666666
+ },
+ "lazy": {
+  "n": 30,
+  "correct": 27,
+  "api_errors": 0,
+  "accuracy": 0.9,
+  "mean_prompt_tokens": 9063.5,
+  "diffs_to_apply_mean": 10.0,
+  "diffs_to_apply_min": 10,
+  "diffs_to_apply_max": 10
+ },
+ "grader": "deepseek-v4.1-flash",
+ "settings": {
+  "cases": 30,
+  "diffs": 10,
+  "rebase": 10,
+  "question": "anchor"
+ }
+}
